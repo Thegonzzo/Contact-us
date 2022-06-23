@@ -14,15 +14,17 @@ $mail = new PHPMailer(true);
         //Configuración inicial del servidor de correos
         $phpmailer = new PHPMailer();
         $phpmailer->isSMTP();
-        $phpmailer->Host = 'smtp.mailtrap.io';
+        $phpmailer->Host = 'smtp.gmail.com';
         $phpmailer->SMTPAuth = true;
-        $phpmailer->Port = 2525;
-        $phpmailer->Username = '7c8d5aa60a8b7c';
-        $phpmailer->Password = 'd9ad7329f3cd5c';
+        $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $phpmailer->Port = 465;
+        $phpmailer->Username = 'gcantutrevino@gmail.com';
+        //Contraseñas de aplicaciones gmal
+        $phpmailer->Password = 'ztuuvfsfqdwoszlq';
 
         //Añadiendo Destinatarios
-        $phpmailer->setFrom('contact@miempresa.com','Mi empresa');
-        $phpmailer->addAddress($email,$name);
+        $phpmailer->setFrom('mark@facebook.com', 'Mark Zuckerberg');
+        $phpmailer->addAddress($email, $name);
 
         //Definiendo el contenido de mi email
         $phpmailer->isHTML(true);

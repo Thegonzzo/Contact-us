@@ -22,7 +22,7 @@ if (isset($_POST["form"])) {
         $body = "$name <$email> te envia el siguiente mensaje: <br><br> $message";
         //Mandar el correo
         sendMail($subject, $body, $email, $name, true);
-
+      
         $status = $messageSuccess;
     }
     else {
